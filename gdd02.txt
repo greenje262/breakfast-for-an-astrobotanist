@@ -1,0 +1,42 @@
+BREAKFAST FOR AN ASTROBOTANIST
+
+Core mechanic
+    Physics-based throwing
+
+Core gameplay loop
+    Player has a finite amount of food to throw to plants, feeding all plants clears the level, allowing the scientist to get close
+
+Intended player experience
+    Learning game physics to make shots count, probably will only play through once or twice
+    Each "level" is another section of the space station
+
+Theme
+    High-tech, spacey, set on a space station
+
+Primary features
+    Player, plant, and food sprites
+        The food is an animal (could be non-descript meat-looking stuff)
+        I'm imagining pirahna plant or pitcher plant style plants
+        Player is a lab-coat-wearing badass, with a food-pitching animation
+    Physics-based throwing mechanic
+    Once fed, plants are satiated (they provide the materials needed to make the food?)
+
+Secondary features
+    Main menu, level select, game over
+    Multiple levels, space station environment
+    Player wind-up to throw farther, associated sprites
+    Music, sound effects
+    Variable gravity
+
+Polish
+    Intro cutscene
+    Different kinds of plants
+    Voice acting
+    'Success!' sprites
+
+What do I need to learn?
+    Loading different scenes in Godot
+    Making and using a tileset to build levels
+    How to tie an animation to button input (for the wind-up effect)
+    How to set gravity, etc. to be different in certain spaces (area node?)
+    How to configure control nodes (button color, etc.)
