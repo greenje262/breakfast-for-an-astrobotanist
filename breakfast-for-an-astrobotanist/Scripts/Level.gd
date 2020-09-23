@@ -3,7 +3,10 @@ extends Node2D
 const GRAVITY = 500
 const FOOD = preload("res://Scenes/Food.tscn")
 
-onready var food_count = 10
+onready var food_count = 13
+
+func _ready():
+	$FoodCounter/Label.text = str(food_count)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("throw") and food_count > 0:
@@ -24,3 +27,4 @@ func throw():
 	food.apply_impulse(Vector2(), (get_global_mouse_position() - $Player.position).normalized() * throw_vel)
 	
 	food_count = food_count - 1
+	$FoodCounter/Label.text = str(food_count)
