@@ -9,17 +9,17 @@ size = 128
 extra_spacing_char = 36
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
 [sub_resource type="StyleBoxEmpty" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=7]
 size = 50
 extra_spacing_char = 16
 font_data = ExtResource( 1 )
@@ -64,7 +64,7 @@ __meta__ = {
 }
 
 [node name="DropTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 autostart = true
 
 [node name="Play" type="Button" parent="."]
@@ -72,12 +72,12 @@ margin_left = 448.0
 margin_top = 544.0
 margin_right = 576.0
 margin_bottom = 608.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.0823529, 0.854902, 0.0941176, 1 )
 custom_colors/font_color_pressed = Color( 0.160784, 0.560784, 0, 1 )
@@ -91,12 +91,12 @@ margin_left = 704.0
 margin_top = 544.0
 margin_right = 832.0
 margin_bottom = 608.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.0823529, 0.0823529, 1 )
 custom_colors/font_color_pressed = Color( 0.560784, 0, 0, 1 )
@@ -105,4 +105,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="timeout" from="DropTimer" to="." method="_on_DropTimer_timeout"]
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

@@ -20,7 +20,9 @@ b = Vector2( -40.1273, 51.0159 )
 a = Vector2( -83.0009, 10.0736 )
 b = Vector2( -116.372, 15.7467 )
 
-[node name="Plant" type="Node2D"]
+[node name="Plant" type="Node2D" groups=[
+"plants",
+]]
 scale = Vector2( 0.9, 0.9 )
 script = ExtResource( 2 )
 

@@ -12,3 +12,8 @@ func _on_DropTimer_timeout():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+func _on_Play_pressed():
+	FoodCount.count = 10
+	FoodCount.fed = 0
+	get_tree().change_scene("res://Scenes/LevelHolder.tscn")

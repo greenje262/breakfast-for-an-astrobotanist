@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="breakfast-for-an-astrobotanist"
-run/main_scene="res://Scenes/Level.tscn"
+run/main_scene="res://Scenes/TitleScene.tscn"
 config/icon="res://Sprites/icon.png"
+
+[autoload]
+
+FoodCount="*res://Scripts/FoodCount.gd"
 
 [display]
 
