@@ -4,13 +4,13 @@ const FOOD = preload("res://Scenes/Food.tscn")
 const FOODBAD = preload("res://Scenes/FoodBad.tscn")
 
 func _ready():
-	$Label.text = "YOU FED " + str(FoodCount.fed) + " PLANTS"
+	$Label.text = "YOU FED ALL THE PLANTS"
 
 func _physics_process(delta):
 	if get_tree().get_nodes_in_group("food").size() <= FoodCount.fed - 1:
 		food_fill()
 	
-	if get_tree().get_nodes_in_group("foodbad").size() <= (FoodCount.FOODSTART - FoodCount.fed) - 1:
+	if get_tree().get_nodes_in_group("foodbad").size() <= (FoodCount.count - FoodCount.fed) - 1:
 		food_bad_fill()
 
 func food_fill():
@@ -25,6 +25,7 @@ func food_bad_fill():
 
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://Scenes/TitleScene.tscn")
+	queue_free()
 
 func _on_QuitButton_pressed():
 	get_tree().quit()

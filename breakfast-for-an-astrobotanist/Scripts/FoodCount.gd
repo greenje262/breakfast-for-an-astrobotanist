@@ -1,6 +1,6 @@
 extends Node2D
 
-const FOODSTART = 100
+const FOODSTART = 0
 
 var count = FOODSTART
 

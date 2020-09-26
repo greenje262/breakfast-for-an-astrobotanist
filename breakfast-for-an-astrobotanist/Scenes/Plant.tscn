@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/FedSmoke.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 19.1932
+radius = 12.8426
 
 [sub_resource type="SegmentShape2D" id=2]
 a = Vector2( 32.4627, -54.3324 )
@@ -38,7 +38,7 @@ z_index = -1
 texture = ExtResource( 1 )
 
 [node name="FoodTrigger" type="Area2D" parent="."]
-position = Vector2( 0.264862, -4.23785 )
+position = Vector2( 6.1975, -4.60864 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FoodTrigger"]
 position = Vector2( -7.78633, 26.4678 )

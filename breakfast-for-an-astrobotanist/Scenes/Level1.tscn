@@ -30,6 +30,7 @@ position = Vector2( 616, 151 )
 position = Vector2( 1120, 440 )
 
 [node name="FoodCounter" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {

@@ -1,7 +1,6 @@
 extends Node2D
 
 const LVL_PATH = "res://Scenes/Level%d.tscn"
-const END = "res://Scenes/EndScene.tscn"
 
 var lvl_num = 1
 
@@ -10,9 +9,9 @@ func _ready():
 	add_to_group("levelholder")
 	call_deferred("init")
 
-func _physics_process(delta):
-	if FoodCount.count == 0:
-		food_out()
+#func _physics_process(delta):
+#	if FoodCount.count == 0:
+#		food_out()
 
 func init():
 	load_level(lvl_num)
@@ -31,9 +30,9 @@ func on_level_clear():
 	lvl_num += 1
 	load_level(lvl_num)
 
-func food_out():
-	yield(get_tree().create_timer(10), "timeout")
-	var root = get_tree().root
-	if root.has_node("Level"):
-		root.remove_child(root.get_node("Level"))
-	get_tree().change_scene("res://Scenes/EndScene.tscn")
+#func food_out():
+#	yield(get_tree().create_timer(10), "timeout")
+#	var root = get_tree().root
+#	if root.has_node("Level"):
+#		root.remove_child(root.get_node("Level"))
+#	get_tree().change_scene("res://Scenes/Level9.tscn")
